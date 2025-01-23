@@ -4,6 +4,9 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <style>
         #map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+        .popup {
+
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +17,54 @@
     <script>
         var map = L.map('map').setView([49.983487, 18.252040], 5)
         L.tileLayer('https://api.maptiler.com/maps/dataviz/256/{z}/{x}/{y}.png?key=0kQ6iGFdPlbSdvzM9r1S', {
-    maxZoom: 20, tileSize: 256, minZoom: 4,
+    maxZoom: 20, tileSize: 256, minZoom: 3,
     attribution: '&copy; <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
 }).addTo(map);
+
+const ikoon1 = L.icon({
+    iconUrl:'./pin-svgrepo-com.svg',
+    iconSize: [30, 30]
+})
+
+const reisid = {
+    läti: {
+        coords:[30, 20],
+        aasta: '2000',
+        link: 'https://google.com',
+        koht: '<h2>Läti</h2><br>'
+    },
+    rootsi: {
+        coords:[40, 15],
+        aasta: '2000',
+        link: 'https://google.com',
+        koht: '<h2>Rootsi</h2><br>'
+    },
+    uk: {
+        coords:[60, 20],
+        aasta: '2000',
+        link: 'https://google.com',
+        koht: '<h2>Inglismaa</h2><br>'
+    }
+}
+
+for(let key in reisid) {
+
+    const reis = reisid[key];
+
+    L.marker(reis.coords, {
+        icon: ikoon1
+    })
+    .bindPopup(`<span class ='popup'>
+        ${reis.koht}
+        <p>Aasta: ${reis.aasta}</p><br>
+        <a href="${reis.link}" target="_blank">Link fotodele</a>
+        </span>`
+    )
+    .addTo(map)
+}
+
+
+
     </script>
 </body>
 </html>
