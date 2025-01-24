@@ -30,19 +30,19 @@ const ikoon1 = L.icon({
 const reisid = {
     riia: {
         coords:[56.948370, 24.10780],
-        aasta: '2005 (pere), 2023 (pere)',
+        aasta: '2005 (pere)<br>2023 (pere)',
         link: 'https://google.com',
         koht: '<h2>Riia</h2><br>'
     },
     tenerife: {
         coords:[28.253091, -16.576745],
-        aasta: '2006, 2007 (pere)',
+        aasta: '2006 (pere)<br>2007 (pere)',
         link: 'https://google.com',
         koht: '<h2>Tenerife</h2><br>'
     },
     rootsi: {
         coords:[59.324021, 18.071164],
-        aasta: '2008 (pere), 2012 (pere + Nele jt)',
+        aasta: '2008 (pere)<br>2012 (pere + Nele jt)',
         link: 'https://google.com',
         koht: '<h2>Stockholm</h2><br>'
     },
@@ -54,7 +54,7 @@ const reisid = {
     },
     london: {
         coords:[51.509832, -0.163653],
-        aasta: '2010 (pere), 2015 (pere + Nele ja Robin), 2017 (Signe ja Alo), 2017 (Alo ja Kristjan), 2019 (Signe ja Alo)',
+        aasta: '2010 (pere)<br>2015 (pere + Nele ja Robin)<br>2017 (Signe ja Alo)<br>2017 (Alo ja Kristjan)<br>2019 (Signe ja Alo)',
         link: 'https://google.com',
         koht: '<h2>London</h2><br>'
     },
@@ -84,19 +84,19 @@ const reisid = {
     },
     berliin: {
         coords:[52.516220, 13.388622],
-        aasta: '2014 (Signe ja Alo), 2018 (pere)',
+        aasta: '2014 (Signe ja Alo)<br>2018 (pere)',
         link: 'https://google.com',
         koht: '<h2>Berliin</h2><br>'
     },
     kreeta: {
         coords:[35.257403, 24.986915],
-        aasta: '2014 (pere), 2016 (Signe ja Alo), 2017 (Signe ja Alo), 2018 (Signe ja Alo), 2022 (Signe ja Alo)',
+        aasta: '2014 (pere)<br>2016 (Signe ja Alo)<br>2017 (Signe ja Alo)<br>2018 (Signe ja Alo)<br>2022 (Signe ja Alo)',
         link: 'https://google.com',
         koht: '<h2>Kreeta</h2><br>'
     },
     prantsusmaa: {
         coords:[47.390599, 1.599033],
-        aasta: '2015 (Signe ja Alo), 2017 (Signe)',
+        aasta: '2015 (Signe ja Alo)<br>2017 (Signe)',
         link: 'https://google.com',
         koht: '<h2>Château de Fondjouan</h2><br>'
     },
@@ -120,7 +120,7 @@ const reisid = {
     },
     bali: {
         coords:[-8.513028, 115.262080],
-        aasta: '2018 (Signe ja Alo), 2019 (pere)',
+        aasta: '2018 (Signe ja Alo)<br>2019 (pere)',
         link: 'https://google.com',
         koht: '<h2>Bali</h2><br>'
     },
@@ -167,8 +167,8 @@ for(let key in reisid) {
     })
     .bindPopup(`<span class ='popup'>
         ${reis.koht}
-        <p>${reis.aasta}</p><br>
-        <a href="${reis.link}" target="_blank">Link fotodele</a>
+        ${reis.aasta}
+        <br><br><a href="${reis.link}" target="_blank">Link fotodele</a>
         </span>`
     )
     .addTo(map)
