@@ -28,24 +28,134 @@ const ikoon1 = L.icon({
 })
 
 const reisid = {
-    läti: {
+    riia: {
         coords:[56.948370, 24.10780],
-        aasta: '2005',
+        aasta: '2005 (pere), 2023 (pere)',
         link: 'https://google.com',
-        koht: '<h2>Läti</h2><br>'
+        koht: '<h2>Riia</h2><br>'
     },
     tenerife: {
         coords:[28.253091, -16.576745],
-        aasta: '2006, 2007',
+        aasta: '2006, 2007 (pere)',
         link: 'https://google.com',
         koht: '<h2>Tenerife</h2><br>'
     },
     rootsi: {
         coords:[59.324021, 18.071164],
-        aasta: '2008',
+        aasta: '2008 (pere), 2012 (pere + Nele jt)',
         link: 'https://google.com',
         koht: '<h2>Stockholm</h2><br>'
+    },
+    rhodos: {
+        coords:[36.202738, 27.967165],
+        aasta: '2009 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Rhodos</h2><br>'
+    },
+    london: {
+        coords:[51.509832, -0.163653],
+        aasta: '2010 (pere), 2015 (pere + Nele ja Robin), 2017 (Signe ja Alo), 2017 (Alo ja Kristjan), 2019 (Signe ja Alo)',
+        link: 'https://google.com',
+        koht: '<h2>London</h2><br>'
+    },
+    barcelona: {
+        coords:[41.389918, 2.157393],
+        aasta: '2011 (Signe ja Alo)',
+        link: 'https://google.com',
+        koht: '<h2>Barcelona</h2><br>'
+    },
+    kuldsedliivad: {
+        coords:[43.284219, 28.041059],
+        aasta: '2011 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Kuldsed liivad</h2><br>'
+    },
+    lapimaa: {
+        coords:[69.059963, 20.548737],
+        aasta: '2012 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Lapimaa</h2><br>'
+    },
+    amsterdam: {
+        coords:[52.370928, 4.897891],
+        aasta: '2013 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Amsterdam</h2><br>'
+    },
+    berliin: {
+        coords:[52.516220, 13.388622],
+        aasta: '2014 (Signe ja Alo), 2018 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Berliin</h2><br>'
+    },
+    kreeta: {
+        coords:[35.257403, 24.986915],
+        aasta: '2014 (pere), 2016 (Signe ja Alo), 2017 (Signe ja Alo), 2018 (Signe ja Alo), 2022 (Signe ja Alo)',
+        link: 'https://google.com',
+        koht: '<h2>Kreeta</h2><br>'
+    },
+    prantsusmaa: {
+        coords:[47.390599, 1.599033],
+        aasta: '2015 (Signe ja Alo), 2017 (Signe)',
+        link: 'https://google.com',
+        koht: '<h2>Château de Fondjouan</h2><br>'
+    },
+    rooma: {
+        coords:[41.890239, 12.492133],
+        aasta: '2016 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Rooma</h2><br>'
+    },
+    itaalia: {
+        coords:[45.458389, 7.802444],
+        aasta: '2017 (Signe)',
+        link: 'https://google.com',
+        koht: '<h2>Matvasei</h2><br>'
+    },
+    gotland: {
+        coords:[57.455556, 18.49237],
+        aasta: '2017 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Gotland</h2><br>'
+    },
+    bali: {
+        coords:[-8.513028, 115.262080],
+        aasta: '2018 (Signe ja Alo), 2019 (pere)',
+        link: 'https://google.com',
+        koht: '<h2>Bali</h2><br>'
+    },
+    moskva: {
+        coords:[55.754279, 37.619494],
+        aasta: '2019 (Alo)',
+        link: 'https://google.com',
+        koht: '<h2>Moskva</h2><br>'
+    },
+    lodz: {
+        coords:[51.771624, 19.452552],
+        aasta: '2019 (pere, Jürgenil külas)',
+        link: 'https://google.com',
+        koht: '<h2>Łódź</h2><br>'
+    },
+    helsingi: {
+        coords:[60.181736, 24.884513],
+        aasta: '2020 (Signe ja Alo)',
+        link: 'https://google.com',
+        koht: '<h2>Helsingi</h2><br>'
+    },
+    gran_canaria: {
+        coords:[27.945946, -15.596856],
+        aasta: '2023 (Signe ja Alo)',
+        link: 'https://google.com',
+        koht: '<h2>Gran Canaria</h2><br>'
+    },
+    madeira: {
+        coords:[32.651867, -16.907541],
+        aasta: '2024 (Signe)',
+        link: 'https://google.com',
+        koht: '<h2>Madeira</h2><br>'
     }
+
+    
 }
 
 for(let key in reisid) {
@@ -57,7 +167,7 @@ for(let key in reisid) {
     })
     .bindPopup(`<span class ='popup'>
         ${reis.koht}
-        <p>Aasta: ${reis.aasta}</p><br>
+        <p>${reis.aasta}</p><br>
         <a href="${reis.link}" target="_blank">Link fotodele</a>
         </span>`
     )
